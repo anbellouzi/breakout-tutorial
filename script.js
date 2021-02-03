@@ -83,13 +83,18 @@ function drawPaddle() {
   ctx.closePath();
 }
 
+function randomColor() {
+  const colors = ['red', 'green', 'blue', 'purple', 'grey', 'white', 'black'];
+  return colors[Math.floor(Math.random() * colors.length)];
+}
+
 function drawBricks() {
   for (let c = 0; c < brickColumnCount; c += 1) {
     for (let r = 0; r < brickRowCount; r += 1) {
       if (bricks[c][r].status === 1) {
         ctx.beginPath();
         ctx.rect(bricks[c][r].x, bricks[c][r].y, brickWidth, brickHeight);
-        ctx.fillStyle = '#baa14f';
+        ctx.fillStyle = randomColor();
         ctx.fill();
         ctx.closePath();
       }
