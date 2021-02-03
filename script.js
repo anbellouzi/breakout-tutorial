@@ -138,6 +138,7 @@ function collisionCanvas() {
       dx = 3;
       dy = -3;
       paddleX = (canvas.width - paddleWidth) / 2;
+      
     }
   }
 }
